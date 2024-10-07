@@ -1,9 +1,8 @@
 import React,{ useEffect, useRef } from 'react';
-import { NavLink } from 'react-router-dom';
 import Typed from 'typed.js';
-import robologs from "../assests/robocop-high-resolution-logo-white-transparent.webp"
-import robhead from "../assests/Asset 2.svg"
 import mainrobo from "../assests/Asset 1.svg";
+import { Header } from '../components';
+import { Chatbot } from '../components';
 
 
 export const Landing = () => {
@@ -26,22 +25,7 @@ export const Landing = () => {
     <>
       <section className="landingbanner">
         <div className="container">
-        <header>
-          <div className="mainlogo">
-          <img className='headrobocop' src={robhead} alt="logo" />
-            <img src={robologs} alt="logo" />
-          </div>
-          <div className="mainnavigation">
-            <nav className="navigation">
-              <NavLink to="/" className="link" end>Home</NavLink>
-              <NavLink to="/cart" className="link">About</NavLink>
-              <NavLink to="/cart" className="link">Subscriptions</NavLink>
-              <NavLink to="/cart" className="link">Blogs</NavLink>
-              <NavLink to="/cart" className="link">Contact Us</NavLink>
-            </nav>
-          </div>
-          <div className="calltoactions">  <button className='mainButton'> Log In</button></div>
-        </header>
+          <Header/>
         <div className="textfeilds">
           <h1 className='mainheading' ref={el}></h1>
         
@@ -50,7 +34,9 @@ export const Landing = () => {
           </div>
           
         </div>
+        <Chatbot/>
         </div>
+      
       </section>
     </>
   )
