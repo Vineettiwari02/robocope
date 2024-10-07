@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
 
 body {
@@ -111,7 +110,8 @@ button.mainButton:hover {
   max-width: 60px;
   /* margin-right: 8px; */
 }
-.mainheading{
+
+.mainheading {
   font-size: 84px;
   color: #fff;
   font-weight: 700;
@@ -122,7 +122,8 @@ button.mainButton:hover {
   font-family: "Oxanium", sans-serif;
   font-optical-sizing: auto;
 }
-.mainrobo{
+
+.mainrobo {
   max-width: 250px;
   position: fixed;
   bottom: 50px;
@@ -130,30 +131,186 @@ button.mainButton:hover {
 }
 
 @keyframes bounce2 {
-	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	40% {transform: translateY(-30px);}
-	60% {transform: translateY(-15px);}
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
 }
+
+.chatbutton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  outline: none;
+  border-color: transparent;
+  box-shadow: rgba(6, 160, 255, 0.429) 0px 50px 100px -20px, rgba(0, 255, 255, 0.553) 0px 30px 60px -30px;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  position: absolute;
+  left: 75px;
+  top: 75px;
+  transition: 0.2s all ease-in-out;
+}
+
+.chatbutton:hover {
+  background-color: #18828b;
+  transition: 0.2s all ease-in-out;
+}
+
+.chatbuttonblock {
+  position: fixed;
+  right: 50px;
+  bottom: 0px;
+}
+
+
+.circles {
+  height: 200px;
+  position: relative;
+  width: 200px;
+  z-index: 1;
+}
+
+.circles>div {
+  animation: growAndFade 3s infinite ease-out;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.circles .circle1 {
+  animation-delay: 1s;
+}
+
+.circles .circle2 {
+  animation-delay: 2s;
+}
+
+.circles .circle3 {
+  animation-delay: 3s;
+}
+
+@keyframes growAndFade {
+  0% {
+    opacity: 0.25;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.chatbotBlock {
+  position: fixed;
+  right: 50px;
+  bottom: 130px;
+  background-color: #fff;
+  min-width: 25vw;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.2s all ease-in-out;
+}
+
+.chatbotBlock .chatbotHeader {
+  background-color: #18828b;
+  color: white;
+  padding: 12px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 9;
+  text-align: left;
+}
+
+.chatbotBlock .chatbotfooter {
+  display: flex;
+  align-self: center;
+}
+
+.chatbotBlock .chatbotfooter input {
+  width: 90%;
+  padding: 15px 15px;
+  border: 0px;
+  border-top: 1px solid rgb(197, 197, 197);
+  font-size: 16px;
+}
+
+.chatbotBlock .chatbotfooter input:hover,
+.chatbotBlock .chatbotfooter input:focus,
+.chatbotBlock .chatbotfooter input:focus-visible {
+  border: 0px;
+  border-top: 1px solid rgb(197, 197, 197);
+  outline: none;
+}
+
+.chatbotBlock .chatbotfooter button {
+  border: none;
+  outline: none;
+  background-color: #18828b;
+  cursor: pointer;
+  text-align: center;
+  padding: 15px 15px;
+  display: flex;
+}
+
+.chatbotBlock .chatbotBody {
+  min-height: 50vh;
+  padding: 15px 18px;
+}
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:721px) {
-  .mainnavigation{
+  .mainnavigation {
     display: none;
   }
-  .mainheading{
+
+  .mainheading {
     font-size: 44px;
     width: 100%;
   }
-  .mainrobo{
+
+  .mainrobo {
     left: 50px;
     max-width: 150px;
   }
+
   .mainlogo {
     max-width: 80px;
-}
-button.mainButton{
-  min-width: 80px;
-  padding: 7px 18px;
-  font-size: 14px;
+  }
+
+  button.mainButton {
+    min-width: 80px;
+    padding: 7px 18px;
+    font-size: 14px;
+  }
+  .chatbuttonblock {
+    position: fixed;
+    right: -30px;
+    bottom: 0px;
 }
 }
