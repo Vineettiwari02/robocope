@@ -19,14 +19,26 @@ code {
 
 }
 
-.container {
+.container{
   max-width: 1350px;
   margin: auto;
   padding: 0 15px;
   z-index: 1;
   position: relative;
 }
-
+.errorblock {
+  max-width: 620px;
+  margin: auto;
+  padding: 15px 0;
+  z-index: 1;
+  position: relative;
+}
+.errorblock img{
+  width: 100%;
+}
+.errorblock a.mainButton{
+  margin-top: 50px;
+}
 header {
   display: flex;
   align-items: center;
@@ -76,7 +88,7 @@ header {
   gap: 45px;
 }
 
-button.mainButton {
+button.mainButton , a.mainButton{
   outline: none;
   border: 1px solid #2bb1bd;
   background-color: #1babb8;
@@ -88,9 +100,10 @@ button.mainButton {
   font-weight: 700;
   font-size: 16px;
   transition: 0.2s all ease-in;
+  text-decoration: none;
 }
 
-button.mainButton:hover {
+button.mainButton:hover,a.mainButton:hover {
   background-color: #18828b;
   transition: 0.2s all ease-in;
   box-shadow: 0 0 25px 1px #48abe0;
